@@ -1,0 +1,95 @@
+/* Header */
+
+.header {
+    background-color: $beige;
+    display: flex;
+    flex-direction: column;
+    &__logo {
+        width: 40%;
+        &__img {
+            padding-left: 20px;
+            align-self: center;
+        }
+    }
+    &__nav {
+        display: flex;
+        color: $blanc;
+        background-color: $violet_dark;
+        font-weight: bolder;
+        justify-content: flex-end;
+        padding: 10px;
+        font-size: large;
+        &__home {
+            padding: 5px 30px;
+        }
+        &__cart {
+            padding: 5px 30px;
+        }
+        &__products {
+            padding: 5px 30px;
+        }
+    }
+}
+
+// CSS Mobile
+@media all and (min-width: 320px) and (max-width: 764px) {
+    .header {
+        &__logo {
+            width: 100%;
+            &__img {
+                width: 45%;
+            }
+        }
+        &__nav {
+            font-size: medium;
+            &__home {
+                padding: 5px 15px;
+            }
+            &__cart {
+                padding: 5px 15px;
+            }
+            &__products {
+                padding: 5px 15px;
+            }
+        }
+    }
+}
+
+//CSS Tablettes
+@media all and (min-width: 765px) and (max-width: 899px) {
+    .header {
+        &__logo {
+            width: 100%;
+            &__img {
+                width: 35%;
+            }
+        }
+        &__nav {
+            font-size: medium;
+            &__home {
+                padding: 5px 20px;
+            }
+            &__cart {
+                padding: 5px 20px;
+            }
+            &__products {
+                padding: 5px 20px;
+            }
+        }
+    }
+}
+
+// CSS Laptop and more
+@media all and (min-width: 900px) {
+    .header {
+        &__logo {
+            width: 100%;
+            &__img {
+                width: 25%;
+            }
+        }
+        &__nav {
+            font-size: medium;
+        }
+    }
+}

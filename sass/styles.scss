@@ -1,0 +1,19 @@
+/* pour lancer la compilation du sass en css :  sass --watch ./sass/style.scss ./public/css/style.css */
+
+// base
+@import './01_base/__reset';
+// utils
+@import './02_utils/__colors';
+//layouts
+@import './03_layouts/_article';
+@import './03_layouts/__footer';
+@import './03_layouts/__header';
+@import './03_layouts/__sub-header';
+// components
+@import './04_components/__button';
+@import './04_components/__icons';
+// pages
+@import './05_pages/__cart';
+@import './05_pages/__confirmation';
+@import './05_pages/__list';
+@import './05_pages/__products';

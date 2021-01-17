@@ -1,0 +1,60 @@
+/* Footer */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $beige;
+    color: $noirish;
+    font-size: 20px;
+    &__desc {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0px;
+        &__company {
+            font-weight: 900;
+        }
+        &__address {
+            font-size: medium;
+        }
+    }
+    &__conditions {
+        background-color: $violet_dark;
+        color: $blanc;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0px;
+    }
+}
+
+// CSS Mobile
+@media all and (min-width: 320px) and (max-width: 764px) {
+    .footer {
+        &__desc {
+            padding: 20px 0px;
+        }
+        &__conditions {
+            display: flex;
+            flex-direction: column;
+            font-size: medium;
+            align-items: center;
+        }
+    }
+}
+
+//CSS Tablettes
+@media all and (min-width: 765px) and (max-width: 899px) {
+    .footer {
+        &__desc {
+            padding: 30px 0px;
+        }
+        &__conditions {
+            display: flex;
+            flex-direction: row;
+            font-size: medium;
+        }
+    }
+}
+
+// CSS Laptop and more
+@media all and (min-width: 900px) {}

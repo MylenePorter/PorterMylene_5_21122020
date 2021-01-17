@@ -1,0 +1,29 @@
+    /* Sub-header : Slogan */
+    
+    .sub-header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: $violet_clair;
+        &__slogan {
+            font-size: xx-large;
+            font-weight: bolder;
+            margin: 40px;
+            text-align: center;
+        }
+        &__expedition {
+            font-size: medium;
+            font-style: italic;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+    }
+    
+    // CSS Mobile
+    @media all and (min-width: 320px) and (max-width: 764px) {}
+    
+    //CSS Tablettes
+    @media all and (min-width: 765px) and (max-width: 899px) {}
+    
+    // CSS Laptop and more
+    @media all and (min-width: 900px) {}

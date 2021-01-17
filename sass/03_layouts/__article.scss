@@ -1,0 +1,60 @@
+/* Bloc Article*/
+
+.article {
+    margin: 17px 25px;
+    display: flex;
+    border-radius: 9px;
+    background-color: $beige;
+    padding: 10px;
+    &__img {
+        width: 30%;
+        background-color: $blanc;
+        border-radius: 9px;
+        padding: 10px;
+        margin: 10px;
+        width: 200px;
+    }
+    &__desc {
+        width: 60%;
+        margin: 10px;
+        &__title {
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 9px;
+            background-color: $blanc;
+            font-weight: bolder;
+            font-size: x-large;
+        }
+        &__details {
+            margin-top: 10px;
+            padding: 5px;
+            border-radius: 9px;
+            background-color: white;
+            font-style: italic;
+        }
+    }
+    &__infos {
+        width: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin: 10px;
+        &__price {
+            font-weight: bolder;
+            text-align: center;
+        }
+        &__more {
+            text-align: center;
+            text-decoration: underline;
+        }
+    }
+}
+
+// CSS Mobile
+@media all and (min-width: 320px) and (max-width: 764px) {}
+
+//CSS Tablettes
+@media all and (min-width: 765px) and (max-width: 899px) {}
+
+// CSS Laptop and more
+@media all and (min-width: 900px) {}

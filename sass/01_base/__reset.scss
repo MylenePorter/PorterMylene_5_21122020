@@ -1,0 +1,16 @@
+/* Resets CSS */
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+#body {
+    min-width: 320px;
+    margin: 0;
+    padding: 0;
+}
