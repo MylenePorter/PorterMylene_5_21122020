@@ -1,0 +1,22 @@
+{
+    "name": "orinoco_website",
+    "version": "1.0.0",
+    "description": "site orinoco",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass --watch /sass/styles.scss:/css/styles.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MylenePorter/PorterMylene_5_21122020.git"
+    },
+    "keywords": [
+        "P5"
+    ],
+    "author": "MylenePorter",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/MylenePorter/PorterMylene_5_21122020/issues"
+    },
+    "homepage": "https://github.com/MylenePorter/PorterMylene_5_21122020#readme"
+}
