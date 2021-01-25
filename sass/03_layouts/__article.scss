@@ -12,10 +12,17 @@
         border-radius: 9px;
         padding: 10px;
         margin: 10px;
+        &--cart {
+            width: 8%;
+            padding: 5px;
+        }
     }
     &__desc {
         width: 50%;
         margin: 10px;
+        &--cart {
+            align-self: center;
+        }
         &__choice {
             &__drop {
                 width: 100%;
@@ -72,6 +79,10 @@
                 text-align: center;
                 font-weight: bold;
                 color: $beige;
+                &--cart {
+                    align-self: center;
+                    height: fit-content;
+                }
             }
             &__qty {
                 align-self: center;
@@ -79,6 +90,7 @@
                     width: 40px;
                     padding: 5px;
                     text-align: center;
+                    margin: 5px;
                 }
             }
             &__plus {
@@ -89,6 +101,10 @@
                 text-align: center;
                 font-weight: bold;
                 color: $beige;
+                &--cart {
+                    align-self: center;
+                    height: fit-content;
+                }
             }
         }
         &__tocart {
@@ -105,6 +121,17 @@
 #product_photo img {
     width: 100%;
     height: 100%;
+}
+
+#product_delete {
+    align-self: center;
+    background-color: #805768;
+    padding: 10px 5px;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: bold;
+    color: #f3e9f1;
+    margin: 5px;
 }
 
 // CSS Mobile
