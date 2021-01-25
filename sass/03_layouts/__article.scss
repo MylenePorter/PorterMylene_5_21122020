@@ -12,11 +12,22 @@
         border-radius: 9px;
         padding: 10px;
         margin: 10px;
-        width: 200px;
     }
     &__desc {
-        width: 60%;
+        width: 50%;
         margin: 10px;
+        &__choice {
+            &__drop {
+                width: 100%;
+                margin-bottom: 20px;
+                padding: 5px;
+                border-radius: 9px;
+                border: 3px solid $noirish;
+                background-color: $beige;
+                font-style: italic;
+                font-size: large;
+            }
+        }
         &__title {
             margin-bottom: 10px;
             padding: 5px;
@@ -31,10 +42,11 @@
             border-radius: 9px;
             background-color: white;
             font-style: italic;
+            font-size: medium;
         }
     }
     &__infos {
-        width: 10%;
+        width: 15%;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
@@ -42,16 +54,79 @@
         &__price {
             font-weight: bolder;
             text-align: center;
+            color: $violet_dark;
+            font-size: x-large;
         }
         &__more {
             text-align: center;
             text-decoration: underline;
         }
+        &__add {
+            display: flex;
+            justify-content: space-evenly;
+            &__minus {
+                background-color: $violet_clair;
+                padding: 5px;
+                border-radius: 5px;
+                margin-right: 5px;
+                text-align: center;
+                font-weight: bold;
+                color: $beige;
+            }
+            &__qty {
+                align-self: center;
+                &__form {
+                    width: 40px;
+                    padding: 5px;
+                    text-align: center;
+                }
+            }
+            &__plus {
+                background-color: $violet_clair;
+                padding: 5px;
+                border-radius: 5px;
+                margin-left: 5px;
+                text-align: center;
+                font-weight: bold;
+                color: $beige;
+            }
+        }
+        &__tocart {
+            background-color: $violet_dark;
+            padding: 10px 5px;
+            text-align: center;
+            border-radius: 10px;
+            font-weight: bold;
+            color: $beige;
+        }
     }
 }
 
+#product_photo img {
+    width: 100%;
+    height: 100%;
+}
+
 // CSS Mobile
-@media all and (min-width: 320px) and (max-width: 764px) {}
+@media all and (min-width: 320px) and (max-width: 764px) {
+    .article {
+        display: flex;
+        flex-direction: column;
+        &__img {
+            width: fit-content;
+        }
+        &__desc {
+            width: fit-content;
+        }
+        &__infos {
+            width: fit-content;
+            align-self: center;
+            &__add {
+                margin: 10px 0px;
+            }
+        }
+    }
+}
 
 //CSS Tablettes
 @media all and (min-width: 765px) and (max-width: 899px) {}
