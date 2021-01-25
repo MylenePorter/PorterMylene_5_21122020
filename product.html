@@ -7,63 +7,82 @@
     <meta name="description" content="">
     <title>Orinoco - Les produits stars du moment</title>
     <link rel="stylesheet" href="/css/styles.css">
-    <script src="/js/script.js"></script>
 </head>
 
-<body id="body">
+<body id="body" onload="showProduct(category, product);">
 
-    <!--Header-->
+    <!-- Header -->
     <header id="header" class="header">
         <div class="header__logo">
             <a href="index.html">
                 <img class="header__logo__img" src="/img/logo/logo_orinoco.png" alt="Logo Orinoco">
             </a>
         </div>
-        <!--Menu navigation-->
+        <!-- Menu navigation -->
         <nav class="header__nav">
-            <!--Panier-->
-            <div class="header__nav__home"><a href="index.html">Accueil</a></div>
+            <!-- Panier -->
+            <div class="header__nav__home"><a href="index.html">Nos produits</a></div>
             <div class="header__nav__cart"><a href="cart.html">Mon panier</a></div>
         </nav>
     </header>
 
     <!-- Slogan -->
     <section class="sub-header">
-        <div class="sub-header__slogan">Découvrez ***Titre de l'article***</div>
+        <div class="sub-header__slogan">Découvrez nos produits star du moment</div>
         <div class="sub-header__expedition">Avec toujours une expédition sous 24h dans toute la France</div>
     </section>
 
-    <!-- Liste des articles-->
+    <!-- Liste des articles -->
     <section class="articles">
-
+        <!-- Photo article -->
         <div class="article">
-            <div class="article__img">Photo</div>
+            <div class="article__img" id="product_photo">Photo</div>
+
+            <!-- Description article -->
             <div class="article__desc">
-                <div class="article__desc__title">Titre article</div>
-                <div class="article__desc__details">Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* </div>
+                <div class="article__desc__choice">
+                    Choisissez votre produit
+                    <select class="article__desc__choice__drop" name="" id="product_choice">
+                        <option value="">Choisissez votre produit</option>
+                    </select>
+                </div>
+                <div class="article__desc__title" id="product_title">Titre article</div>
+                <div class="article__desc__details" id="product_details">Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* </div>
             </div>
+
+            <!-- Infos article -->
             <div class="article__infos">
-                <div class="article__infos__price">25 €</div>
-                <a href="#">
-                    <div class="article__infos__more">Qté & + </div>
+                <!-- Prix -->
+                <div id="product_price" class="article__infos__price">Prix</div>
+                <!-- Changement quantités -->
+                <div class="article__infos__add">
+                    <!-- Réduire quantité -->
+                    <button id="product_minus" onclick="decreaseAmount()" class="article__infos__add__minus">-</button>
+                    <div id="product_qty" class="article__infos__add__qty">
+                        <form action="post" action="#">
+                            <input type="number" id="product_amount" value="1" min="0" step="1" max="10" class="article__infos__add__qty__form">
+                        </form>
+                    </div>
+                    <!-- Augmenter quantité -->
+                    <button id="product_plus" onclick="increaseAmount()" class="article__infos__add__plus">+</button>
+                </div>
+                <a href="#" onclick="addToCart()">
+                    <div id="product_tocart" class="article__infos__tocart">Ajouter</div>
                 </a>
             </div>
         </div>
 
     </section>
 
-    <!--Footer-->
+    <!-- Footer -->
     <footer class="footer">
-        <!--Adresse et contacts-->
+        <!-- Adresse et contacts -->
         <div class="footer__desc">
-
             <div class="footer__desc__company"><a href="#header">Orinoco</a></div>
-
             <div class="footer__desc__address">4 rue du commerce - 75000 PARIS</div>
-
         </div>
 
-        <!--Terms & Conditions-->
+        <!-- Terms & Conditions -->
         <div class="footer__conditions">
             <div class="footer__conditions__sale"><a href="#">Conditions de Vente</a></div>
             <div class="footer__conditions__contact"><a href="mailto:contact@orinoco.com ">Contactez-nous</a></div>
@@ -71,6 +90,10 @@
             <div class="footer__conditions__shipping"><a href="#">Livraisons</a></div>
         </div>
     </footer>
+
+    <script src="/js/common.js"></script>
+    <script src="/js/product.js"></script>
+    <script src="/js/cart.js"></script>
 </body>
 
 </html>

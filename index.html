@@ -7,21 +7,20 @@
     <meta name="description" content="">
     <title>Orinoco - Les produits stars du moment</title>
     <link rel="stylesheet" href="/css/styles.css">
-    <script src="/js/script.js"></script>
 </head>
 
-<body id="body">
+<body id="body" onload="listAll('cameras');">
 
-    <!--Header-->
+    <!-- Header -->
     <header id="header" class="header">
         <div class="header__logo">
             <a href="index.html">
                 <img class="header__logo__img" src="/img/logo/logo_orinoco.png" alt="Logo Orinoco">
             </a>
         </div>
-        <!--Menu navigation-->
+        <!-- Menu navigation -->
         <nav class="header__nav">
-            <!--Panier-->
+            <!-- Panier -->
             <div class="header__nav__home"><a href="#articles">Nos produits</a></div>
             <div class="header__nav__cart"><a href="cart.html">Mon panier</a></div>
         </nav>
@@ -29,80 +28,45 @@
 
     <!-- Slogan -->
     <section class="sub-header">
-        <div class="sub-header__slogan">Découvrez nos 3 produits stars du moment <br>PERSONNALISABLES !</div>
-        <div class="sub-header__expedition">Expédition sous 24h dans toute la France</div>
+        <h1 class="sub-header__slogan">Découvrez nos produits stars du moment !</h1>
+        <h2 class="sub-header__expedition">Expédition sous 24h dans toute la France</h2>
     </section>
 
-    <!-- Liste des articles-->
+    <!-- Liste des articles -->
     <section id="articles">
 
-        <!-- ARTICLE 1 -->
+        <!-- ARTICLE -->
         <div class="article">
-            <!--Photo article-->
-            <div id="line1_pic" class="article__img">Photo</div>
+            <!-- Photo article -->
+            <div id="article_pic" class="article__img">Photo</div>
 
-            <!--Description article-->
+            <!-- Description article -->
             <div class="article__desc">
-                <div id="line1_title" class="article__desc__title"><a href="/product.html">Titre article</a></div>
-                <div id="line1_details" class="article__desc__details">Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* </div>
+                <div id="article_title" class="article__desc__title">
+                    <a href="/product.html">
+                        <h3>Titre article</h3>
+                    </a>
+                </div>
+                <div id="article_details" class="article__desc__details">Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* </div>
             </div>
 
-            <!--Infos article-->
+            <!-- Infos article -->
             <div class="article__infos">
-                <div id="line1_price" class="article__infos__price">25 €</div>
-                <div id="line1_more" class="article__infos__more"><a href="/product.html">+ d'infos</a></div>
-            </div>
-        </div>
-
-        <!-- ARTICLE 2 -->
-        <div class="article">
-            <!--Photo article-->
-            <div id="line1_pic" class="article__img">Photo</div>
-
-            <!--Description article-->
-            <div class="article__desc">
-                <div id="line2_title" class="article__desc__title"><a href="/product.html">Titre article</a></div>
-                <div id="line2_details" class="article__desc__details">Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* </div>
-            </div>
-
-            <!--Infos article-->
-            <div class="article__infos">
-                <div id="line2_price" class="article__infos__price">25 €</div>
-                <div id="line2_more" class="article__infos__more"><a href="/product.html">+ d'infos</a></div>
-            </div>
-        </div>
-
-        <!-- ARTICLE 3 -->
-        <div class="article">
-            <!--Photo article-->
-            <div id="line1_pic" class="article__img">Photo</div>
-
-            <!--Description article-->
-            <div class="article__desc">
-                <div id="line3_title" class="article__desc__title"><a href="/product.html">Titre article</a></div>
-                <div id="line3_details" class="article__desc__details">Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* </div>
-            </div>
-
-            <!--Infos article-->
-            <div class="article__infos">
-                <div id="line3_price" class="article__infos__price">25 €</div>
-                <div id="line3_more" class="article__infos__more"><a href="/product.html">+ d'infos</a></div>
+                <div id="product_price" class="article__infos__price">Prix</div>
+                <div id="product_more" class="article__infos__more"><a href="/product.html">+ d'infos</a></div>
             </div>
         </div>
     </section>
 
-    <!--Footer-->
+    <!-- Footer -->
     <footer class="footer">
-        <!--Adresse et contacts-->
+        <!-- Adresse et contacts -->
         <div class="footer__desc">
-
-            <div class="footer__desc__company">Orinoco</div>
-
+            <div class="footer__desc__company"><a href="#header">Orinoco</a></div>
             <div class="footer__desc__address">4 rue du commerce - 75000 PARIS</div>
-
         </div>
 
-        <!--Terms & Conditions-->
+        <!-- Terms & Conditions -->
         <div class="footer__conditions">
             <div class="footer__conditions__sale"><a href="#">Conditions de Vente</a></div>
             <div class="footer__conditions__contact"><a href="mailto:contact@orinoco.com ">Contactez-nous</a></div>
@@ -110,6 +74,9 @@
             <div class="footer__conditions__shipping"><a href="#">Livraisons</a></div>
         </div>
     </footer>
+
+    <script src="/js/common.js"></script>
+    <script src="/js/index.js"></script>
 </body>
 
 </html>
