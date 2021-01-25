@@ -16,6 +16,11 @@ a {
   padding: 0;
 }
 
+h3 {
+  padding: 0px;
+  margin: 0px;
+}
+
 /*Noir-ish*/
 /*Violet clair*/
 /*Violet foncé*/
@@ -24,7 +29,6 @@ a {
 /*Blanc*/
 /*Orange*/
 /*Orangé/Violet*/
-/*Gradients*/
 /* Bloc Article*/
 .article {
   margin: 17px 25px;
@@ -39,11 +43,20 @@ a {
   border-radius: 9px;
   padding: 10px;
   margin: 10px;
-  width: 200px;
 }
 .article__desc {
-  width: 60%;
+  width: 50%;
   margin: 10px;
+}
+.article__desc__choice__drop {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 5px;
+  border-radius: 9px;
+  border: 3px solid #261624;
+  background-color: #f3e9f1;
+  font-style: italic;
+  font-size: large;
 }
 .article__desc__title {
   margin-bottom: 10px;
@@ -59,9 +72,10 @@ a {
   border-radius: 9px;
   background-color: white;
   font-style: italic;
+  font-size: medium;
 }
 .article__infos {
-  width: 10%;
+  width: 15%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -70,12 +84,76 @@ a {
 .article__infos__price {
   font-weight: bolder;
   text-align: center;
+  color: #805768;
+  font-size: x-large;
 }
 .article__infos__more {
   text-align: center;
   text-decoration: underline;
 }
+.article__infos__add {
+  display: flex;
+  justify-content: space-evenly;
+}
+.article__infos__add__minus {
+  background-color: #b7718e;
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 5px;
+  text-align: center;
+  font-weight: bold;
+  color: #f3e9f1;
+}
+.article__infos__add__qty {
+  align-self: center;
+}
+.article__infos__add__qty__form {
+  width: 40px;
+  padding: 5px;
+  text-align: center;
+}
+.article__infos__add__plus {
+  background-color: #b7718e;
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 5px;
+  text-align: center;
+  font-weight: bold;
+  color: #f3e9f1;
+}
+.article__infos__tocart {
+  background-color: #805768;
+  padding: 10px 5px;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #f3e9f1;
+}
 
+#product_photo img {
+  width: 100%;
+  height: 100%;
+}
+
+@media all and (min-width: 320px) and (max-width: 764px) {
+  .article {
+    display: flex;
+    flex-direction: column;
+  }
+  .article__img {
+    width: fit-content;
+  }
+  .article__desc {
+    width: fit-content;
+  }
+  .article__infos {
+    width: fit-content;
+    align-self: center;
+  }
+  .article__infos__add {
+    margin: 10px 0px;
+  }
+}
 /* Footer */
 .footer {
   display: flex;
