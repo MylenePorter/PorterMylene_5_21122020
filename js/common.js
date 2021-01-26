@@ -5,6 +5,7 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const category = urlParams.get('category'); // Ex: cameras
 const product = urlParams.get('product'); // Ex: 5be1ed3f1c9d44000030b061
+const order_number = urlParams.get('order_number'); // Numéro de commande
 
 /*
 // Synchronus AJAX sans promesses
@@ -21,7 +22,6 @@ function makeCall(url) {
 function makeCallAsync(url) {
     return new Promise((resolve) => {
         var req = new XMLHttpRequest();
-        req.open("GET", url);
         req.addEventListener("load", function() {
             // Call OK
             if (req.status >= 200 && req.status < 400) {
@@ -30,15 +30,15 @@ function makeCallAsync(url) {
                 resolve(JSON.parse(req.responseText));
             }
         });
+        req.open("GET", url);
         req.send(null);
     });
 }
 
-function makePostAsync(){
+function makePostAsync(url, order){
     return new Promise((resolve) => {
+        console.log(order);
         var req = new XMLHttpRequest();
-        req.open("POST", url);
-        req.setRequestHeader("Content-Type", "application/json");
         req.addEventListener("load", function() {
             // Call OK
             if (req.readyState == XMLHttpRequest.DONE && req.status < 201) {
@@ -47,7 +47,9 @@ function makePostAsync(){
                 resolve(JSON.parse(req.responseText));
             }
         });
-        req.send(null);
+        req.open("POST", url);
+        req.setRequestHeader("Content-Type", "application/json");
+        req.send(order);
     });
 }
 
@@ -55,6 +57,7 @@ function makePostAsync(){
 function convertToPrice(price) {
     price = price / 100;
     price = price.toFixed(2);
-    price = price + "&nbsp;€";
+    price = new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(price)
+    //price = price + "&nbsp;€";
     return price;
 }

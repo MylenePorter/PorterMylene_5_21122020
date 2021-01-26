@@ -59,15 +59,47 @@ function validateForm() {
         alert("Pas de lettres dans le code postal svp");
         returned = false;
     }
-    console.log(returned);
     if(returned === true){
-        document.getElementById("Order").submit();
+        var contact = {
+            firstName : fname,
+            lastName : lname,
+            address : street,
+            city : town,
+            email : email
+        }; // Object
+        if(passOrder(contact)){
+            // Rediriger la page sur order_confirmed.html
+        }
     }
     return returned;
 }
 
-function prepareOrder(){
-    
+function getAllProducts() {
+    var products = [];
+    var keys = Object.keys(localStorage);
+    var i = keys.length;
+    while ( i-- ) {
+        products.push(localStorage.key(keys[i]));
+    }
+    return products;
+}
+
+function passOrder(contact){
+    // Envoyer la commande par Ajax
+    var products = getAllProducts(); // Array
+    var order = {
+        contact,
+        products
+    }
+    order = JSON.stringify(order);
+    console.log(order);
+    var url = "http://localhost:3000/api/teddies/order";
+    makePostAsync(url, order)
+        .then((response) => {
+            // Recevoir le numéro de commande
+            console.log(response);
+            //window.location = "/order_confirmed.html";
+        });
 }
 
 // Valider les caractères insérés dans champ email
