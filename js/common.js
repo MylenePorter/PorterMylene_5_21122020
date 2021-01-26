@@ -17,7 +17,7 @@ function makeCall(url) {
 
 // Promises
 function makeCallAsync(url) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
         var req = new XMLHttpRequest();
         req.open("GET", url);
         req.addEventListener("load", function() {
@@ -28,8 +28,22 @@ function makeCallAsync(url) {
                 resolve(JSON.parse(req.responseText));
             }
         });
-        req.addEventListener("error", function(err) {
-            reject("Erreur réseau avec l'URL " + url, err);
+        req.send(null);
+    });
+}
+
+function makePostAsync(){
+    return new Promise((resolve) => {
+        var req = new XMLHttpRequest();
+        req.open("POST", url);
+        req.setRequestHeader("Content-Type", "application/json");
+        req.addEventListener("load", function() {
+            // Call OK
+            if (req.readyState == XMLHttpRequest.DONE && req.status < 201) {
+                console.log('makePostAsync success');
+                // Appelle la fonction callback en lui passant la réponse de la requête
+                resolve(JSON.parse(req.responseText));
+            }
         });
         req.send(null);
     });
