@@ -71,7 +71,7 @@ h3 {
   border-radius: 9px;
   background-color: white;
   font-weight: bolder;
-  font-size: x-large;
+  font-size: large;
 }
 .article__desc__details {
   margin-top: 10px;
@@ -92,7 +92,7 @@ h3 {
   font-weight: bolder;
   text-align: center;
   color: #805768;
-  font-size: x-large;
+  font-size: large;
 }
 .article__infos__more {
   text-align: center;
@@ -151,7 +151,7 @@ h3 {
   height: 100%;
 }
 
-#product_delete {
+.product_remove {
   align-self: center;
   background-color: #805768;
   padding: 10px 5px;
@@ -331,6 +331,30 @@ h3 {
   font-style: italic;
   margin-bottom: 20px;
   text-align: center;
+}
+
+.cart__price {
+  margin: 17px 25px;
+  text-align: right;
+  border-radius: 9px;
+  background-color: #f3e9f1;
+  padding: 10px;
+  font-size: large;
+  font-weight: bold;
+}
+.cart__form {
+  margin: 17px 25px;
+  border-radius: 9px;
+  background-color: #f3e9f1;
+  padding: 10px;
+  font-size: medium;
+}
+.cart__form__title {
+  font-weight: bold;
+  padding: 5px;
+}
+.cart__form__person {
+  display: flex;
 }
 
 /*# sourceMappingURL=styles.css.map */
