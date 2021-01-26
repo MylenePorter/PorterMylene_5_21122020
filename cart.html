@@ -10,7 +10,7 @@
 </head>
 
 
-<body id="body" onload="getCart('cameras');">
+<body id="body">
 
     <!-- Header -->
     <header id="header" class="header">
@@ -35,29 +35,41 @@
     </section>
 
     <!-- Liste des articles -->
-    <section id="articles">
+    <section id="articles"></section>
 
-        <!-- ARTICLE -->
-        <div class="article">
-            <!-- Photo article -->
-            <div id="article_pic" class="article__img">Photo</div>
+    <!-- Prix total du panier -->
+    <section id="cart">
+        <h3 class="cart__price">
+            Prix total du panier =
+            <span id="cart-total"></span>
+        </h3>
+    </section>
 
-            <!-- Description article -->
-            <div class="article__desc">
-                <div id="article_title" class="article__desc__title">
-                    <a href="product.html">
-                        <h3>Titre article</h3>
-                    </a>
-                </div>
-                <div id="article_details" class="article__desc__details">Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* Détails sur l'article */* </div>
+    <!-- Formulaire pour valider commande -->
+    <section id="cart_validation" class="cart__form">
+        <form onsubmit="event.preventDefault();return validateForm();">
+            <div class="cart__form__title">Formulaire de validation de commande</div>
+            <div class="cart__form__person">
+                <div class="cart__form__person__Lastname">Nom</div>
+                <input type="text" id="lname" value="">
+                <div class="cart__form__person__firstname">Prénom</div>
+                <input type="text" id="fname" value="">
             </div>
-
-            <!-- Infos article -->
-            <div class="article__infos">
-                <div id="product_price" class="article__infos__price">Prix</div>
-                <div id="product_more" class="article__infos__more"><a href="/product.html">+ d'infos</a></div>
+            <div class="cart__form__email">
+                <div class="cart__form__email__value">Email</div>
+                <input type="email" id="email" value="">
             </div>
-        </div>
+            <div class="cart__form__address">
+                <div class="cart__form__address__street">N° et nom de rue</div>
+                <input type="text" id="street" value="">
+                <div class="cart__form__address__code">Code Postal</div>
+                <input type="number" id="postcode" value="">
+                <div class="cart__form__address__town">Ville</div>
+                <input type="text" id="town" value="">
+            </div>
+            <button>Valider ma commande</button>
+        </form>
+
     </section>
 
     <!-- Footer -->
@@ -78,8 +90,8 @@
     </footer>
 
     <script src="/js/common.js"></script>
-    <script src="/js/cart_test.js"></script>
-    <!-- <script src="/js/cart.js"></script> -->
+    <script src="/js/cart.js"></script>
+    <script src="/js/form.js"></script>
 </body>
 
 </html>

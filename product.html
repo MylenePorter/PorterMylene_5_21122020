@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body id="body" onload="showProduct(category, product);">
+<body id="body">
 
     <!-- Header -->
     <header id="header" class="header">
@@ -66,11 +66,13 @@
                     <!-- Augmenter quantité -->
                     <button id="product_plus" onclick="increaseAmount()" class="article__infos__add__plus">+</button>
                 </div>
+                <!-- Ajout au panier -->
                 <a href="#" onclick="addToCart()">
                     <div id="product_tocart" class="article__infos__tocart">Ajouter</div>
                 </a>
             </div>
         </div>
+
 
     </section>
 
@@ -93,7 +95,6 @@
 
     <script src="/js/common.js"></script>
     <script src="/js/product.js"></script>
-    <script src="/js/cart_test.js"></script>
 </body>
 
 </html>

@@ -41,7 +41,7 @@
             border-radius: 9px;
             background-color: $blanc;
             font-weight: bolder;
-            font-size: x-large;
+            font-size: large;
         }
         &__details {
             margin-top: 10px;
@@ -62,7 +62,7 @@
             font-weight: bolder;
             text-align: center;
             color: $violet_dark;
-            font-size: x-large;
+            font-size: large;
         }
         &__more {
             text-align: center;
@@ -123,7 +123,7 @@
     height: 100%;
 }
 
-#product_delete {
+.product_remove {
     align-self: center;
     background-color: #805768;
     padding: 10px 5px;

@@ -35,3 +35,5 @@ function listLoop(list) {
     });
     document.getElementById("articles").innerHTML = products;
 }
+//Au chargement de la page, charger tous les produits de la section Cameras
+listAll("cameras");
