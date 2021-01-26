@@ -3,7 +3,7 @@
 // Vérification informations correctes et bien formatées
 // dans les différents champs avant envoie
 function validateForm() {
-    var returned = false;
+    var returned = true;
     // Nom
     var lname = document.getElementById('lname').value;
     if (lname == "") {
@@ -17,12 +17,12 @@ function validateForm() {
         returned = false;
     }
     // Pas de chiffres dans le nom ou prénom
-    if (allLetters(lname) === false) {
-        alert("Pas de chiffres dans le nom");
+    if (allLetters(lname) == false) {
+        alert("Pas de chiffres dans le nom svp");
         returned = false;
     }
-    if (allLetters(fname) === false) {
-        alert("Pas de chiffres dans le nom");
+    if (allLetters(fname) == false) {
+        alert("Pas de chiffres dans le prénom svp");
         returned = false;
     }
     // Email
@@ -56,11 +56,18 @@ function validateForm() {
     }
     // Pas de lettres dans le code postal
     if (!allNumbers(postcode)) {
-        alert("Pas de lettres svp");
+        alert("Pas de lettres dans le code postal svp");
         returned = false;
     }
-    console.log
-    return false;
+    console.log(returned);
+    if(returned === true){
+        document.getElementById("Order").submit();
+    }
+    return returned;
+}
+
+function prepareOrder(){
+    
 }
 
 // Valider les caractères insérés dans champ email
@@ -70,33 +77,23 @@ function validateEmail(email) {
 }
 
 // Valider que les données ne sont que des lettres (et pas des chiffres)
-function allLetters(inputtxt) {
-    var first_length = inputtxt.length;
-    console.log(first_length, inputtxt);
-    var letters = /[^a-zA-Z]+/;
-    inputtxt.match(letters);
-    var new_length = inputtxt.length;
-    console.log(new_length, inputtxt);
-    if (new_length == first_length) {
-        return false;
-    } else if (new_length < first_length) {
+function allLetters(input) {
+    const re = /^[a-zA-Z]+$/;
+    console.log(input.match(re));
+    if(input.match(re)){
+        return true;
+    }else{
         return false;
     }
-    return false;
 }
 
 // Valider que les données ne sont que des lettres (et pas des chiffres)
 function allNumbers(input) {
-    var first_length = input.length;
-    console.log(first_length, input);
-    var numbers = /[^0-9]+/;
-    input.match(numbers);
-    var new_length = input.length;
-    console.log(new_length, input);
-    if (new_length == first_length) {
-        //return true;
-    } else if (new_length < first_length) {
+    const re = /^[0-9]+$/;
+    console.log(input.match(re));
+    if(input.match(re)){
+        return true;
+    }else{
         return false;
     }
-    return false;
 }
