@@ -1,3 +1,5 @@
+// *** COMMON ***
+
 // Query (variables dans URL)
 const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
@@ -35,7 +37,7 @@ function makeCallAsync(url) {
     });
 }
 
-// Convert Price
+// Convertir en prix et ajout €
 function convertToPrice(price) {
     price = price / 100;
     price = price.toFixed(2);

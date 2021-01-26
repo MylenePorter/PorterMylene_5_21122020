@@ -1,6 +1,6 @@
-// ***PRODUCT**
+// *** PRODUCT **
 
-// 
+// Afficher le détails des produits et mettre les options dans la liste déroulante
 function showProduct(category, product) {
     var url = "http://localhost:3000/api/" + category + "/" + product;
     //console.log(url);
@@ -39,3 +39,23 @@ function updateProduct(list) {
     document.getElementById("product_details").innerHTML = product_details;
     document.getElementById("product_price").innerHTML = convertToPrice(product_price);
 }
+
+// + sur "product_amount" avant ajout panier
+function increaseAmount() {
+    document.getElementById("product_amount").stepUp(1);
+}
+
+// - sur "product_amount" avant ajout panier
+function decreaseAmount() {
+    document.getElementById("product_amount").stepDown(1);
+}
+
+// Ajouter au localStorage (key, value)
+function addToCart() {
+    var qty = document.getElementById("product_amount").value;
+    var db = window.localStorage;
+    db.setItem(product, qty);
+}
+
+// Au chargement de la page afficher les produits de la catégorie Caméras
+showProduct(category, product);
