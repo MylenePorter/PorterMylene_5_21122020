@@ -72,11 +72,6 @@ function showCartTotalPrice() {
     document.getElementById("cart-total").innerHTML = cart_price;
 }
 
-//
-function showCartItems(product) {
-    // TODO: innerHTML
-}
-
 // - ou + sur "product_amount" pour mettre à jour quantité dans Panier
 function increaseProductAmount(id) {
     var qty = parseFloat(document.getElementById("product_amount_" + id).value);

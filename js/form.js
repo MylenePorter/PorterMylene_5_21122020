@@ -59,15 +59,15 @@ function validateForm() {
         alert("Pas de lettres dans le code postal svp");
         returned = false;
     }
-    if(returned === true){
+    if (returned === true) {
         var contact = {
-            firstName : fname,
-            lastName : lname,
-            address : street,
-            city : town,
-            email : email
+            firstName: fname,
+            lastName: lname,
+            address: street,
+            city: town,
+            email: email
         }; // Object
-        if(passOrder(contact)){
+        if (passOrder(contact)) {
             // Rediriger la page sur order_confirmed.html
         }
     }
@@ -78,13 +78,13 @@ function getAllProducts() {
     var products = [];
     var keys = Object.keys(localStorage);
     var i = keys.length;
-    while ( i-- ) {
-        products.push(localStorage.key(keys[i]));
+    while (i--) {
+        products.push(localStorage.key(i));
     }
     return products;
 }
 
-function passOrder(contact){
+function passOrder(contact) {
     // Envoyer la commande par Ajax
     var products = getAllProducts(); // Array
     var order = {
@@ -92,14 +92,8 @@ function passOrder(contact){
         products
     }
     order = JSON.stringify(order);
-    console.log(order);
-    var url = "http://localhost:3000/api/teddies/order";
-    makePostAsync(url, order)
-        .then((response) => {
-            // Recevoir le numéro de commande
-            console.log(response);
-            //window.location = "/order_confirmed.html";
-        });
+    var url = "http://localhost:3000/api/cameras/order";
+    makePostAsync(url, order);
 }
 
 // Valider les caractères insérés dans champ email
@@ -112,9 +106,9 @@ function validateEmail(email) {
 function allLetters(input) {
     const re = /^[a-zA-Z]+$/;
     console.log(input.match(re));
-    if(input.match(re)){
+    if (input.match(re)) {
         return true;
-    }else{
+    } else {
         return false;
     }
 }
@@ -123,9 +117,9 @@ function allLetters(input) {
 function allNumbers(input) {
     const re = /^[0-9]+$/;
     console.log(input.match(re));
-    if(input.match(re)){
+    if (input.match(re)) {
         return true;
-    }else{
+    } else {
         return false;
     }
 }

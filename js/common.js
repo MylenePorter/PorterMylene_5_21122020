@@ -7,17 +7,6 @@ const category = urlParams.get('category'); // Ex: cameras
 const product = urlParams.get('product'); // Ex: 5be1ed3f1c9d44000030b061
 const order_number = urlParams.get('order_number'); // Numéro de commande
 
-/*
-// Synchronus AJAX sans promesses
-function makeCall(url) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", url, false);
-    xhttp.send();
-    var returned = JSON.parse(xhttp.responseText);
-    console.log(returned);
-    return returned;
-}*/
-
 // Promises
 function makeCallAsync(url) {
     return new Promise((resolve) => {
@@ -35,22 +24,21 @@ function makeCallAsync(url) {
     });
 }
 
-function makePostAsync(url, order){
-    return new Promise((resolve) => {
-        console.log(order);
-        var req = new XMLHttpRequest();
-        req.addEventListener("load", function() {
-            // Call OK
-            if (req.readyState == XMLHttpRequest.DONE && req.status < 201) {
-                console.log('makePostAsync success');
-                // Appelle la fonction callback en lui passant la réponse de la requête
-                resolve(JSON.parse(req.responseText));
-            }
+function makePostAsync(url, order) {
+    fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            mode: 'cors',
+            body: order
+        })
+        .then((response) => response.json())
+        .then((returner) => {
+            console.log(returner.orderId); //3
+            var redirect = "/order_confirmed.html?order_number=" + returner.orderId;
+            window.location = redirect;
         });
-        req.open("POST", url);
-        req.setRequestHeader("Content-Type", "application/json");
-        req.send(order);
-    });
 }
 
 // Convertir en prix et ajout €
@@ -58,6 +46,6 @@ function convertToPrice(price) {
     price = price / 100;
     price = price.toFixed(2);
     price = new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(price)
-    //price = price + "&nbsp;€";
+        //price = price + "&nbsp;€";
     return price;
 }
