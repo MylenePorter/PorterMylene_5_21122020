@@ -8,7 +8,7 @@
     padding: 10px;
     &__img {
         width: 30%;
-        background-color: $blanc;
+        background-color: $bg_image_article;
         border-radius: 9px;
         padding: 10px;
         margin: 10px;
@@ -29,7 +29,7 @@
                 margin-bottom: 20px;
                 padding: 5px;
                 border-radius: 9px;
-                border: 3px solid $noirish;
+                border: 3px solid $bordure_liste_deroulante;
                 background-color: $beige;
                 font-style: italic;
                 font-size: large;
@@ -39,7 +39,7 @@
             margin-bottom: 10px;
             padding: 5px;
             border-radius: 9px;
-            background-color: $blanc;
+            background-color: $bg_title_article;
             font-weight: bolder;
             font-size: large;
         }
@@ -47,7 +47,7 @@
             margin-top: 10px;
             padding: 5px;
             border-radius: 9px;
-            background-color: white;
+            background-color: $bg_details_article;
             font-style: italic;
             font-size: medium;
         }
@@ -61,7 +61,7 @@
         &__price {
             font-weight: bolder;
             text-align: center;
-            color: $violet_dark;
+            color: $price_color;
             font-size: large;
         }
         &__more {
@@ -72,7 +72,7 @@
             display: flex;
             justify-content: space-evenly;
             &__minus {
-                background-color: $violet_clair;
+                background-color: $bg_plus_et_moins;
                 padding: 5px;
                 border-radius: 5px;
                 margin-right: 5px;
@@ -94,7 +94,7 @@
                 }
             }
             &__plus {
-                background-color: $violet_clair;
+                background-color: $bg_plus_et_moins;
                 padding: 5px;
                 border-radius: 5px;
                 margin-left: 5px;
@@ -108,12 +108,12 @@
             }
         }
         &__tocart {
-            background-color: $violet_dark;
+            background-color: $bg_tocart;
             padding: 10px 5px;
             text-align: center;
             border-radius: 10px;
             font-weight: bold;
-            color: $beige;
+            color: $tocart_color;
         }
     }
 }

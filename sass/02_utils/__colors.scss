@@ -1,32 +1,33 @@
 /*Noir-ish*/
 
-$noirish:#261624;
+$bordure_liste_deroulante: #261624;
+$footer_font:#261624;
 
 /*Violet clair*/
 
-$violet_clair: #b7718e;
+$bg_plus_et_moins: #b7718e;
+$sh_color: #b7718e;
 
 /*Violet foncé*/
 
-$violet_fonce: #8f5bfe;
-$violet_dark:#805768;
+$bg_nav:#805768;
+$price_color:#805768;
+$bg_tocart:#805768;
+$bg_footer_color:#805768;
 
 /*Beige*/
 
 $beige:#f3e9f1;
-
-/* Beige foncé */
-
-$beige_fonce: #bfb7bd;
+$tocart_color:#f3e9f1;
 
 /*Blanc*/
 
-$blanc:white;
+$bg_image_article:white;
+$bg_title_article:white;
+$bg_details_article:white;
+$footer_conditions_font:white;
+$header_nav_font:white;
 
-/*Orange*/
+/*Vert*/
 
-$orange:#e18816;
-
-/*Orangé/Violet*/
-
-$orange_violet:#c97b5b;
+$bouton_valider_commande :lightseagreen

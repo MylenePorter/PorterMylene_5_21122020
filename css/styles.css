@@ -25,10 +25,8 @@ h3 {
 /*Violet clair*/
 /*Violet foncé*/
 /*Beige*/
-/* Beige foncé */
 /*Blanc*/
-/*Orange*/
-/*Orangé/Violet*/
+/*Vert*/
 /* Bloc Article*/
 .article {
   margin: 17px 25px;
@@ -351,10 +349,55 @@ h3 {
 }
 .cart__form__title {
   font-weight: bold;
-  padding: 5px;
+  padding: 10px;
 }
 .cart__form__person {
   display: flex;
+  padding: 10px;
+}
+.cart__form__person__lastname {
+  padding: 10px;
+}
+.cart__form__email {
+  padding: 10px;
+}
+.cart__form__address {
+  padding: 10px;
+}
+.cart__form__address__street {
+  padding: 5px;
+}
+.cart__form__address__code {
+  padding: 5px;
+}
+.cart__form__address__town {
+  padding: 5px;
+}
+.cart__form__button {
+  margin: 10px;
+  padding: 5px;
+  background-color: lightseagreen;
+  color: #f3e9f1;
+  font-weight: bold;
+}
+
+@media all and (min-width: 320px) and (max-width: 764px) {
+  .cart__price {
+    font-size: medium;
+  }
+  .cart__form__person {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #lname,
+#fname,
+#email,
+#street,
+#postcode,
+#town {
+    width: 100%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

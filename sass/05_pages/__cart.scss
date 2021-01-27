@@ -16,22 +16,62 @@
         font-size: medium;
         &__title {
             font-weight: bold;
-            padding: 5px;
+            padding: 10px;
         }
         &__person {
             display: flex;
+            padding: 10px;
+            &__lastname {
+                padding: 10px;
+            }
         }
-        &__email {}
+        &__email {
+            padding: 10px;
+        }
         &__address {
-            &__street {}
-            &__code {}
-            &__town {}
+            padding: 10px;
+            &__street {
+                padding: 5px;
+            }
+            &__code {
+                padding: 5px;
+            }
+            &__town {
+                padding: 5px;
+            }
+        }
+        &__button {
+            margin: 10px;
+            padding: 5px;
+            background-color: lightseagreen;
+            color: $beige;
+            font-weight: bold;
         }
     }
 }
 
 // CSS Mobile
-@media all and (min-width: 320px) and (max-width: 764px) {}
+@media all and (min-width: 320px) and (max-width: 764px) {
+    .cart {
+        &__price {
+            font-size: medium;
+        }
+        &__form {
+            &__person {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+    }
+    #lname,
+    #fname,
+    #email,
+    #street,
+    #postcode,
+    #town {
+        width: 100%;
+    }
+}
 
 //CSS Tablettes
 @media all and (min-width: 765px) and (max-width: 899px) {}

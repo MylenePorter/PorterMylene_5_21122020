@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: column;
     background-color: $beige;
-    color: $noirish;
+    color: $footer_font;
     font-size: 20px;
     &__desc {
         display: flex;
@@ -19,8 +19,8 @@
         }
     }
     &__conditions {
-        background-color: $violet_dark;
-        color: $blanc;
+        background-color: $bg_footer_color;
+        color: $footer_conditions_font;
         display: flex;
         justify-content: space-around;
         padding: 10px 0px;
