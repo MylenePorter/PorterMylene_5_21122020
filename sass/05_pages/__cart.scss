@@ -3,7 +3,7 @@
         margin: 17px 25px;
         text-align: right;
         border-radius: 9px;
-        background-color: #f3e9f1;
+        background-color: $bg_cart;
         padding: 10px;
         font-size: large;
         font-weight: bold;
@@ -11,7 +11,7 @@
     &__form {
         margin: 17px 25px;
         border-radius: 9px;
-        background-color: #f3e9f1;
+        background-color: $bg_cart;
         padding: 10px;
         font-size: medium;
         &__title {
@@ -44,7 +44,7 @@
             margin: 10px;
             padding: 5px;
             background-color: lightseagreen;
-            color: $beige;
+            color: $bg_cart;
             font-weight: bold;
         }
     }

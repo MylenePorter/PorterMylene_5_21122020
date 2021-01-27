@@ -1,8 +1,27 @@
-   // CSS Mobile
-   @media all and (min-width: 320px) and (max-width: 764px) {}
-   
-   //CSS Tablettes
-   @media all and (min-width: 765px) and (max-width: 899px) {}
-   
-   // CSS Laptop and more
-   @media all and (min-width: 900px) {}
+.order {
+    margin: 17px 25px;
+    border-radius: 9px;
+    background-color: $bg_confirmation;
+    padding: 10px;
+    text-align: center;
+    &__confirmation {
+        padding: 10px;
+    }
+    &__shipping {
+        padding: 10px;
+    }
+}
+
+#order_number,
+#order_price {
+    font-weight: bold;
+}
+
+// CSS Mobile
+@media all and (min-width: 320px) and (max-width: 764px) {}
+
+//CSS Tablettes
+@media all and (min-width: 765px) and (max-width: 899px) {}
+
+// CSS Laptop and more
+@media all and (min-width: 900px) {}

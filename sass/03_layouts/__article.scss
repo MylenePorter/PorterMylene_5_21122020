@@ -4,7 +4,7 @@
     margin: 17px 25px;
     display: flex;
     border-radius: 9px;
-    background-color: $beige;
+    background-color: $bg_article;
     padding: 10px;
     &__img {
         width: 30%;
@@ -30,7 +30,7 @@
                 padding: 5px;
                 border-radius: 9px;
                 border: 3px solid $bordure_liste_deroulante;
-                background-color: $beige;
+                background-color: $bg_drop;
                 font-style: italic;
                 font-size: large;
             }
@@ -78,7 +78,7 @@
                 margin-right: 5px;
                 text-align: center;
                 font-weight: bold;
-                color: $beige;
+                color: $font_plus_et_moins;
                 &--cart {
                     align-self: center;
                     height: fit-content;
@@ -100,7 +100,7 @@
                 margin-left: 5px;
                 text-align: center;
                 font-weight: bold;
-                color: $beige;
+                color: $font_plus_et_moins;
                 &--cart {
                     align-self: center;
                     height: fit-content;

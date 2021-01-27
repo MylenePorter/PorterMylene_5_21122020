@@ -399,5 +399,23 @@ h3 {
     width: 100%;
   }
 }
+.order {
+  margin: 17px 25px;
+  border-radius: 9px;
+  background-color: #f3e9f1;
+  padding: 10px;
+  text-align: center;
+}
+.order__confirmation {
+  padding: 10px;
+}
+.order__shipping {
+  padding: 10px;
+}
+
+#order_number,
+#order_price {
+  font-weight: bold;
+}
 
 /*# sourceMappingURL=styles.css.map */
