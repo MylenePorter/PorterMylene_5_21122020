@@ -10,7 +10,7 @@ const order_number = urlParams.get('order_number'); // Numéro de commande
 // Promises
 function makeCallAsync(url) {
     return new Promise((resolve) => {
-        var req = new XMLHttpRequest();
+        let req = new XMLHttpRequest();
         req.addEventListener("load", function() {
             // Call OK
             if (req.status >= 200 && req.status < 400) {
@@ -36,7 +36,7 @@ function makePostAsync(url, order) {
         .then((response) => response.json())
         .then((returner) => {
             console.log(returner.orderId); //3
-            var redirect = "/order_confirmed.html?order_number=" + returner.orderId;
+            const redirect = "/order_confirmed.html?order_number=" + returner.orderId;
             window.location = redirect;
         });
 }

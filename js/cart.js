@@ -2,10 +2,10 @@
 
 // Afficher infos du localStorage
 function getCart(category) {
-    var cart_items = [];
-    for (var i = 0; i < localStorage.length; i++) {
+    let cart_items = [];
+    for (let i = 0; i < localStorage.length; i++) {
         // cart_items = cart_items + localStorage.getItem(localStorage.key(i));
-        var cart_price = 0;
+        let cart_price = 0;
         sessionStorage.setItem("cart_price", 0);
         getProductDetails(category, i, localStorage.key(i));
         console.log(cart_price);
@@ -16,15 +16,15 @@ function getCart(category) {
 // Obtenir les informations du localstorage pour chaque ligne
 // et le convertir pour l'afficher dans le panier
 function getProductDetails(category, key, product) {
-    var url = "http://localhost:3000/api/" + category + "/" + product;
+    let url = "http://localhost:3000/api/" + category + "/" + product;
     //console.log(url);
     makeCallAsync(url)
         .then((product_details) => {
             console.log(product_details);
-            var line_total = 0;
-            var qty = localStorage.getItem(product);
+            let line_total = 0;
+            let qty = localStorage.getItem(product);
             line_total = product_details.price * qty;
-            var total_price = parseFloat(sessionStorage.getItem('cart_price'));
+            let total_price = parseFloat(sessionStorage.getItem('cart_price'));
             total_price += line_total;
             sessionStorage.setItem("cart_price", total_price);
             console.log(total_price)
@@ -67,14 +67,14 @@ function formatHTML(product_details, qty, line_total) {
 
 // Calcul du prix total du panier
 function showCartTotalPrice() {
-    var cart_price = convertToPrice(sessionStorage.getItem('cart_price'));
+    let cart_price = convertToPrice(sessionStorage.getItem('cart_price'));
     console.log(cart_price);
     document.getElementById("cart-total").innerHTML = cart_price;
 }
 
 // - ou + sur "product_amount" pour mettre à jour quantité dans Panier
 function increaseProductAmount(id) {
-    var qty = parseFloat(document.getElementById("product_amount_" + id).value);
+    let qty = parseFloat(document.getElementById("product_amount_" + id).value);
     qty = qty + 1;
     console.log("product_amount_" + id);
     document.getElementById("product_amount_" + id).stepUp(1);
@@ -84,14 +84,13 @@ function increaseProductAmount(id) {
 }
 
 function decreaseProductAmount(id) {
-    var qty = parseFloat(document.getElementById("product_amount_" + id).value);
+    let qty = parseFloat(document.getElementById("product_amount_" + id).value);
     qty = qty - 1;
     console.log("product_amount_" + id);
     document.getElementById("product_amount_" + id).stepDown(1);
     //window.localStorage.removeItem(id);
     localStorage.setItem(id, qty);
     location.reload();
-
 }
 
 // Bouton supprimer
